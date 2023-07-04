@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Intro</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    // create a h1 tag
+    // id should be heading
+    // text should be Hello World
+
+    const root = document.getElementById("root");// common
+    // let heading = document.createElement("h1");
+    // heading.setAttribute("id", "heading");
+    // heading.innerText = "Hello World";
+    // root.append(heading);
+
+    const heading = React.createElement("h1", { id: "heading" }, "Hello World");
+    const rootEl = ReactDOM.createRoot(root);
+    rootEl.render(heading);
+</script>
+
+<!-- <div class="product">
+    <img src="" alt="">
+    <h1>Name</h1>
+    <p>Price</p>
+</div> -->
+
+<!-- 1. HTML is easier to understand -->
+<!-- 2. HTML is not interactive need JS -->
+
+</html>
